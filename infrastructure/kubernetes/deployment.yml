@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prometheus-demo
+  labels:
+    app: prometheus-demo
+spec:
+  selector:
+    matchLabels:
+      app: prometheus-demo
+  template:
+    metadata:
+      labels:
+        app: prometheus-demo
+    spec:
+      containers:
+      - name: prometheus-demo
+        image: k8s-custom-monitoring-poc_prometheus_demo:latest
+        imagePullPolicy: IfNotPresent # don't look at docker hub for the image, look locally
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+        ports:
+          - containerPort: 3000
+            name: http
