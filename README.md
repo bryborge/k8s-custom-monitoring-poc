@@ -29,7 +29,7 @@ and
 1.  Create new prometheus service
 
     ```sh
-     kubectl apply -f infrastructure/prometheus/service.yml -f infrastructure/prometheus/deployment.yml -f infrastructure/prometheus/config_map.yml
+    kubectl apply -f infrastructure/prometheus/service.yml -f infrastructure/prometheus/deployment.yml -f infrastructure/prometheus/config_map.yml
     ```
 
 1.  You can get to the services in a web browser.  Access the application at `localhost:30080` and Prometheus at `localhost:30000`
