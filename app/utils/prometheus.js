@@ -2,7 +2,7 @@ const Prometheus = require('prom-client');
 const ResponseTime = require('response-time');
 
 /**
- *
+ * Collect default metrics.
  */
 module.exports.startCollection = () => {
   Prometheus.collectDefaultMetrics();

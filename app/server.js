@@ -25,7 +25,7 @@ App.get('/', (req, res, next) => {
     res.json({ message: 'Hello World!' });
     next();
   },
-  Math.round(Math.random() * 200));
+  Math.round(Math.random() * 200)); // fake server response timing per request
 });
 
 /**
